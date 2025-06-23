@@ -39,8 +39,8 @@ A powerful Telegram bot for performing **OSINT (Open Source Intelligence)** task
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/yourusername/ng-osint-bot.git
-cd ng-osint-bot
+git clone https://github.com/kratik00/bakchodiontop.git
+cd bakchodiontop
 ```
 
 ### 2. Install dependencies
