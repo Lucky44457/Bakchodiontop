@@ -1,13 +1,4 @@
----
-
-### ✅ Shield Badges
-
-Add on top of README:
-
-```markdown
-![Python](https://img.shields.io/badge/Python-3.11-blue)
-![Telegram](https://img.shields.io/badge/Telegram-Bot-blue)
-# 🤖 NG OSINT Bot
+# 🤖 OSINT Bot
 
 A powerful Telegram bot for performing **OSINT (Open Source Intelligence)** tasks like:
 
