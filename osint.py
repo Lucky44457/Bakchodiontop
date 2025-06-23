@@ -388,7 +388,7 @@ def trace_number(phone_number):
                             }
                     except (ValueError, KeyError):
                         continue
-            except:
+            except Exception as e:
                 continue
 
         # Enhanced fallback with detailed analysis
