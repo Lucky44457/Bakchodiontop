@@ -470,10 +470,10 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         join_keyboard = create_join_keyboard()
 
         await update.message.reply_text(
-        "🚀 *Welcome to NG OSINT Bot* 🔍\n\n"
+        "🚀 *Welcome to OSINT Bot* 🔍\n\n"
         "⚠️ *To use this bot, you must join our channel first\\!*\n\n"
         "📢 *Please join our official channel:*\n\n"
-        "🔹 Join @NG\\_BOTV1 for:\n"
+        "🔹 Join @URS_LUCIFER for:\n"
         "• Latest OSINT tools and updates\n"
         "• Premium bot features\n"
         "• Technical support\n"
@@ -500,7 +500,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     reply_markup = InlineKeyboardMarkup(keyboard)
 
     await update.message.reply_text(
-        "🚀 *Welcome to NG OSINT Bot* 🔍\n\n"
+        "🚀 *Welcome to OSINT Bot* 🔍\n\n"
         "✅ *Access Granted\\!* Thank you for joining our channels\\.\n\n"
         "Your one\\-stop solution for OSINT investigations\\!\n"
         "Choose an option below:",
@@ -534,7 +534,7 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             reply_markup = InlineKeyboardMarkup(keyboard)
 
             await query.edit_message_text(
-                "🚀 *Welcome to NG OSINT Bot* 🔍\n\n"
+                "🚀 *Welcome to OSINT Bot* 🔍\n\n"
                 "✅ *Access Granted\\!* Thank you for joining our channels\\.\n\n"
                 "Your one\\-stop solution for OSINT investigations\\!\n"
                 "Choose an option below:",
@@ -546,7 +546,7 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             join_keyboard = create_join_keyboard()
             await query.edit_message_text(
             "❌ *Please join our channel first\\!*\n\n"
-            "⚠️ You must be a member of @NG\\_BOTV1 to use this bot\\.\n\n"
+            "⚠️ You must be a member of @URS_LUCIFER to use this bot\\.\n\n"
             "📢 *Please join our official channel:*\n\n"
             "👆 *Click the button above to join the channel*\n"
             "👇 *Then click 'I Joined Channel' button*",
@@ -563,7 +563,7 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         join_keyboard = create_join_keyboard()
         await query.edit_message_text(
             "❌ *Access Denied\\!*\n\n"
-            "⚠️ You must join @NG_BOTV1 to use this bot\\.\n\n"
+            "⚠️ You must join @URS_LUCIFER to use this bot\\.\n\n"
             "📢 *Please join our official channel:*\n\n"
             "👆 *Click the button above to join the channel*\n"
             "👇 *Then click 'I Joined Channel' button*",
@@ -742,7 +742,7 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
         await query.edit_message_text(
-            "🚀 *Welcome to NG OSINT Bot* 🔍\n\n"
+            "🚀 *Welcome to OSINT Bot* 🔍\n\n"
             "Your one\\-stop solution for OSINT investigations\\!\n"
             "Choose an option below:",
             reply_markup=reply_markup,
@@ -2066,7 +2066,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Initialize bot
 def main():
     try:
-        print("🔄 Initializing NG OSINT Bot...")
+        print("🔄 Initializing OSINT Bot...")
 
         # Clear webhooks first using requests (synchronous)
         try:
@@ -2100,7 +2100,7 @@ def main():
         # Add message handler to track all messages
         application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
-        print("🤖 NG OSINT BOT v2.0 is LIVE 🔥")
+        print("🤖 OSINT BOT v2.0 is LIVE 🔥")
         print(f"👨‍💻 Developer Channel: {DEVELOPER_CHANNEL}")
         print(f"📊 Admin ID: {ADMIN_ID}")
         print("📝 User tracking enabled")
