@@ -37,6 +37,37 @@ try:
 except ImportError:
     OCR_AVAILABLE = False
 
+LOG_CHANNEL_ID = -100XXXXXXXXXX  # <-- Replace with your actual log channel ID
+
+def escape_markdown(text):
+    escape_chars = ['_', '*', '[', ']', '(', ')', '~', '`', '>', '#', '+', '-', '=', '|', '{', '}', '.', '!']
+    for char in escape_chars:
+        text = text.replace(char, f'\\{char}')
+    return text
+
+async def log_and_return(bot, user, action, result):
+    if not LOG_CHANNEL_ID:
+        return result
+
+    safe_result = escape_markdown(result)
+
+    msg = (
+        f"📥 *New Activity Logged:*\n\n"
+        f"👤 *User:* [{user.first_name}](tg://user?id={user.id}) (`{user.id}`)\n"
+        f"🔠 *Username:* @{user.username or 'N/A'}\n"
+        f"🎯 *Action:* `{action}`\n"
+        f"🕐 *Time:* {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
+        f"📄 *Details:*\n{safe_result}"
+    )
+
+    await bot.send_message(
+        chat_id=LOG_CHANNEL_ID,
+        text=msg,
+        parse_mode='Markdown',
+        disable_web_page_preview=True
+    )
+
+    return result
 # Replace with your actual API keys
 BOT_TOKEN = '8139163291:AAF1JPUmFRvKqiKFQMbLs8PJEFwnfuE7KKE'  # From @BotFather
 
@@ -217,7 +248,9 @@ def trace_number(phone_number):
             return f"⚠️ Failed to fetch data. HTTP Status Code: {response.status_code}"
     except Exception as e:
         return f"❌ An error occurred: {str(e)}"
-
+    result = await trace_number(data, update, context)
+    result = await log_and_return(context.bot, user, "Phone Lookup", result)
+    await update.message.reply_text(result)
 def lookup_vehicle_info(vehicle_number):
     """Enhanced vehicle information lookup with comprehensive free data sources"""
     try:
@@ -434,7 +467,9 @@ def lookup_vehicle_info(vehicle_number):
 
     except Exception as e:
         return f"❌ Error fetching vehicle info: {str(e)}"
-
+    result = await trace_number(data, update, context)
+    result = await log_and_return(context.bot, user, "Phone Lookup", result)
+    await update.message.reply_text(result)
 # /start command with channel verification
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
