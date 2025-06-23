@@ -248,13 +248,13 @@ def trace_number(phone_number):
             return f"⚠️ Failed to fetch data. HTTP Status Code: {response.status_code}"
     except Exception as e:
         return f"❌ An error occurred: {str(e)}"
-    async def handle_trace_number(update: Update, context: ContextTypes.DEFAULT_TYPE):
-      user = update.effective_user
-      data = update.message.text.split(" ", 1)[1]
+    #async def handle_trace_number(update: Update, context: ContextTypes.DEFAULT_TYPE):
+     # user = update.effective_user
+    #  data = update.message.text.split(" ", 1)[1]
     
-      result = await trace_number(data, update, context)
-      result = await log_and_return(context.bot, user, "Phone Lookup", result)
-    await update.message.reply_text(result)
+    #  result = await trace_number(data, update, context)
+      #result = await log_and_return(context.bot, user, "Phone Lookup", result)
+   # await update.message.reply_text(result)
     
 def lookup_vehicle_info(vehicle_number):
       #Enhanced vehicle information lookup with comprehensive free data sources
