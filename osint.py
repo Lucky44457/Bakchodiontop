@@ -46,9 +46,9 @@ ADMIN_ID = 7467384643
 
 # Required channels for bot access
 REQUIRED_CHANNELS = [
-    {'name': 'NG METHOD', 'username': '@NG_BOTV1', 'url': 'https://t.me/NG_BOTV1'},
+    {'name': 'LUCIFER💀', 'username': 'URS_LUCIFER', 'url': 'https://t.me/URS_LUCIFER'},
     {'name': 'Developer Channel', 'username': None, 'url': 'https://t.me/+FNstNY_ooV1lYzdl'},
-    {'name': 'Updates Channel', 'username': None, 'url': 'https://t.me/NG_BOTV1'}
+    {'name': 'Updates Channel', 'username': None, 'url': 'https://t.me/URS_LUCIFER'}
 ]
 
 # Set up logging
