@@ -256,8 +256,8 @@ def trace_number(phone_number):
       result = await log_and_return(context.bot, user, "Phone Lookup", result)
     await update.message.reply_text(result)
     
-  def lookup_vehicle_info(vehicle_number):
-      """Enhanced vehicle information lookup with comprehensive free data sources"""
+def lookup_vehicle_info(vehicle_number):
+      #Enhanced vehicle information lookup with comprehensive free data sources
     try:
         # Comprehensive state and RTO codes mapping with more details
         state_codes = {
