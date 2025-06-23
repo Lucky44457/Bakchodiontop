@@ -470,8 +470,6 @@ def trace_number(phone_number):
             "ℹ️ Disclaimer": "For official verification, visit RTO office"
         }
 
-    except Exception as e:
-      return f"❌ Error fetching vehicle info: {str(e)}"
     # /start command with channel verification
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
