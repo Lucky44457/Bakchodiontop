@@ -473,6 +473,7 @@ def trace_number(phone_number):
     except Exception as e:
         return f"❌ Error fetching vehicle info: {str(e)}"
     # /start command with channel verification
+        pass
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
 
