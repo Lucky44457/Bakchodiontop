@@ -716,13 +716,13 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     elif query.data == 'developer':
         keyboard = [
-            [InlineKeyboardButton("📢 Join Channel", url=DEVELOPER_CHANNEL)],
+            [InlineKeyboardButton("📢 Join Channel", url="t.me/urs_lucifer")],
             [InlineKeyboardButton("🔙 Back to Menu", callback_data='back')]
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
         await query.edit_message_text(
             "👨‍💻 *Developer Information*\n\n"
-            "🎯 *Bot Developer:* NG OSINT Team\n"
+            "🎯 *Bot Developer:*LUCIFER❤️\n"
             "🛠️ *Version:* 2\\.0 Advanced\n"
             "⚡️ *Features:* 20\\+OSINT Tools\n"
             "🔒 *Security:* High\\-level encryption\n"
@@ -2137,7 +2137,7 @@ def main():
         application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
         print("🤖 OSINT BOT v2.0 is LIVE 🔥")
-        print(f"👨‍💻 Developer Channel: {DEVELOPER_CHANNEL}")
+        print(f"👨‍💻 Developer Channel: {t.me/urs_lucifer}")
         print(f"📊 Admin ID: {ADMIN_ID}")
         print("📝 User tracking enabled")
         print("⚡ Starting polling...")
