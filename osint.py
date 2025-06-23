@@ -78,7 +78,7 @@ ADMIN_ID = 7764674199
 # Required channels for bot access
 REQUIRED_CHANNELS = [
     {'name': 'LUCIFER💀', 'username': 'URS_LUCIFER', 'url': 'https://t.me/URS_LUCIFER'},
-    {'name': 'Developer Channel', 'username': None, 'url': 'https://t.me/LUCIFERDADA'},
+    #{'name': 'Developer Channel', 'username': None, 'url': 'https://t.me/LUCIFERDADA'},
     {'name': 'Updates Channel', 'username': None, 'url': 'https://t.me/URS_LUCIFER'}
 ]
 
