@@ -258,7 +258,7 @@ def trace_number(phone_number):
     
 def lookup_vehicle_info(vehicle_number):
       """Enhanced vehicle information lookup with comprehensive free data sources"""
-    try:
+  try:
         # Comprehensive state and RTO codes mapping with more details
         state_codes = {
             'AP': 'Andhra Pradesh', 'AR': 'Arunachal Pradesh', 'AS': 'Assam', 'BR': 'Bihar',
