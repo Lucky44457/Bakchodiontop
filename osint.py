@@ -528,28 +528,28 @@ await update.message.reply_text(
 )
 return
 
-    # User is member of all channels - show main menu
-    keyboard = [
-        [InlineKeyboardButton("📱 Phone Lookup", callback_data='phone'), 
-         InlineKeyboardButton("🌐 IP Lookup", callback_data='ip'), 
-         InlineKeyboardButton("🏦 IFSC Lookup", callback_data='ifsc')],
-        [InlineKeyboardButton("🚗 Vehicle Info", callback_data='vehicle'), 
-         InlineKeyboardButton("📧 Email Lookup", callback_data='email')],
-        [InlineKeyboardButton("👤 User Lookup", callback_data='user_lookup')],
-        [InlineKeyboardButton("🔍 Username Scan", callback_data='username_scan')],
-        [InlineKeyboardButton("❓ Help", callback_data='help'),
-         InlineKeyboardButton("👨‍💻 Developer", callback_data='developer')]
-    ]
-    reply_markup = InlineKeyboardMarkup(keyboard)
+# User is member of all channels - show main menu
+keyboard = [
+    [InlineKeyboardButton("📱 Phone Lookup", callback_data='phone'), 
+     InlineKeyboardButton("🌐 IP Lookup", callback_data='ip'), 
+     InlineKeyboardButton("🏦 IFSC Lookup", callback_data='ifsc')],
+    [InlineKeyboardButton("🚗 Vehicle Info", callback_data='vehicle'), 
+     InlineKeyboardButton("📧 Email Lookup", callback_data='email')],
+    [InlineKeyboardButton("👤 User Lookup", callback_data='user_lookup')],
+    [InlineKeyboardButton("🔍 Username Scan", callback_data='username_scan')],
+    [InlineKeyboardButton("❓ Help", callback_data='help'),
+     InlineKeyboardButton("👨‍💻 Developer", callback_data='developer')]
+]
+reply_markup = InlineKeyboardMarkup(keyboard)
 
-    await update.message.reply_text(
-        "🚀 *Welcome to OSINT Bot* 🔍\n\n"
-        "✅ *Access Granted\\!* Thank you for joining our channels\\.\n\n"
-        "Your one\\-stop solution for OSINT investigations\\!\n"
-        "Choose an option below:",
-        reply_markup=reply_markup,
-        parse_mode='MarkdownV2'
-    )
+await update.message.reply_text(
+    "🚀 *Welcome to OSINT Bot* 🔍\n\n"
+    "✅ *Access Granted\\!* Thank you for joining our channels\\.\n\n"
+    "Your one\\-stop solution for OSINT investigations\\!\n"
+    "Choose an option below:",
+    reply_markup=reply_markup,
+    parse_mode='MarkdownV2'
+)
 
 # Callback query handler for inline buttons
 async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -2187,6 +2187,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
 
