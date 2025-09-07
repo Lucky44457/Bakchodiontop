@@ -527,6 +527,7 @@ await update.message.reply_text(
     parse_mode="MarkdownV2"
 )
 return
+
     # User is member of all channels - show main menu
     keyboard = [
         [InlineKeyboardButton("📱 Phone Lookup", callback_data='phone'), 
@@ -2186,6 +2187,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
 
