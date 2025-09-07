@@ -508,8 +508,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(
     f"🆕 NEW USER: <b>{user_id}</b> (@{username}) - {name}",
     parse_mode="HTML"
-        )
-        
+        ) 
         "🚀 *Welcome to OSINT Bot* 🔍\n\n"
         "⚠️ *To use this bot, you must join our channel first\\!*\n\n"
         "📢 *Please join our official channel:*\n\n"
@@ -2184,5 +2183,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
