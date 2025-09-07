@@ -77,9 +77,9 @@ ADMIN_ID = 1838614580
 
 # Required channels for bot access
 REQUIRED_CHANNELS = [
-    {'name': 'LUCIFER💀', 'username': 'URS_LUCIFER', 'url': 'https://t.me/URS_LUCIFER'},
-    #{'name': 'Developer Channel', 'username': None, 'url': 'https://t.me/LUCIFERDADA'},
-    {'name': 'Updates Channel', 'username': None, 'url': 'https://t.me/URS_LUCIFER'}
+    {'name': 'LUCIFER💀', 'username': 'URS_LUCIFER', 'url': 'https://t.me/+mpR0jPllzX80MjRl'},
+    #{'name': 'Developer Channel', 'username': None, 'url': 'https://t.me/+mpR0jPllzX80MjRl'},
+    {'name': 'Updates Channel', 'username': None, 'url': 'https://t.me/+mpR0jPllzX80MjRl'}
 ]
 
 # Set up logging
@@ -2184,4 +2184,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
