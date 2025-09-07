@@ -505,25 +505,28 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         # User is not member of all channels - show join message
         join_keyboard = create_join_keyboard()
 
-        await update.message.reply_text(
+        # Notify admin about new user
+await update.message.reply_text(
     f"🆕 NEW USER: <b>{user_id}</b> (@{username}) - {name}",
     parse_mode="HTML"
-        ) 
-        "🚀 *Welcome to OSINT Bot* 🔍\n\n"
-        "⚠️ *To use this bot, you must join our channel first\\!*\n\n"
-        "📢 *Please join our official channel:*\n\n"
-        "🔹 Join @URS_LUCIFER for:\n"
-        "• Latest OSINT tools and updates\n"
-        "• Premium bot features\n"
-        "• Technical support\n"
-        "• Community discussions\n\n"
-        "👆 *Click the button above to join the channel*\n"
-        "👇 *Then click 'I Joined Channel' button*",
-        reply_markup=join_keyboard,
-        parse_mode='MarkdownV2'
-    )
-        return
+)
 
+# Send welcome message to the user
+await update.message.reply_text(
+    "🚀 *Welcome to OSINT Bot* 🔍\n\n"
+    "⚠️ *To use this bot, you must join our channel first\\!*\n\n"
+    "📢 *Please join our official channel:*\n\n"
+    "🔹 Join @URS_LUCIFER for:\n"
+    "• Latest OSINT tools and updates\n"
+    "• Premium bot features\n"
+    "• Technical support\n"
+    "• Community discussions\n\n"
+    "👆 *Click the button above to join the channel*\n"
+    "👇 *Then click 'I Joined Channel' button*",
+    reply_markup=join_keyboard,
+    parse_mode="MarkdownV2"
+)
+return
     # User is member of all channels - show main menu
     keyboard = [
         [InlineKeyboardButton("📱 Phone Lookup", callback_data='phone'), 
@@ -2183,6 +2186,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
 
